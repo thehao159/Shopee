@@ -1,6 +1,7 @@
 /* Header */
 .header {
     position: fixed;
+    top: 0;
     z-index: 99999;
     width: 100%;
     height: 120px;
@@ -415,10 +416,6 @@
     align-items: center;
 }
 
-.cart__bg-img {
-    
-}
-
 .cart__bg-img--empty {
     width: 100px;
     height: 100px;
@@ -438,3 +435,105 @@
 }
 /* End Header With Search */
 /* End Header */
+
+/* Container */
+.container {
+    margin-top: 120px;
+    background-color: var(--bg-color-blur);
+    height: 5000px;
+}
+
+
+.slider-hotword {
+    padding-top: 30px;
+    background-color: var(--bg-color-light);
+}
+/* Slider & Hot Word */
+/* Slider */
+.slider__wrapper {
+    width: 100%;
+}
+
+.slider__left-section {
+    position: relative;
+    width: 100%;
+}
+
+.slider__left-section:hover .slider__left-arrow-pre {
+    display: flex;
+}
+
+.slider__left-section:hover .slider__left-arrow-next {
+    display: flex;
+}
+
+.slider__left-link,
+.slider__right-top-link,
+.slider__right-bottom-link {
+    text-decoration: none;
+}
+
+.slider__left-bg,
+.slider__right-top-bg,
+.slider__right-bottom-bg {
+    border-radius: 2px;
+}
+
+.slider__left-bg {
+    height: 236px;
+    background: url("https://cf.shopee.vn/file/41ca0343cc8b5e47e4c9c6e4bce54924_xxhdpi") top center / cover no-repeat;
+}
+
+.slider__left-arrow-pre,
+.slider__left-arrow-next {
+    position: absolute;
+    top: 50%;
+    display: none;
+    width: 35px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.18);
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.slider__left-arrow-pre:hover,
+.slider__left-arrow-next:hover {
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+.slider__left-arrow-pre {
+    left: 0;
+}
+
+.slider__left-arrow-next {
+    right: 0;
+}
+
+.slider__left-arrow-icon {
+    color: var(--text-color-bright);
+    font-size: 2.0rem;
+}
+
+.slider__right-section {
+    margin-left: 5px;
+}
+
+.slider__right-top-bg {
+    height: 116px;
+    background: url("https://cf.shopee.vn/file/2f92a6a822404b45e4f5a3ec2fdd3319_xhdpi") top center / cover no-repeat;
+}
+
+.slider__right-bottom-link {
+    margin-top: 4px;
+}
+
+.slider__right-bottom-bg {
+    height: 116px;
+    background: url("https://cf.shopee.vn/file/78728c15fb11beee408bc2b91f0e11a3_xhdpi") top center / cover no-repeat;
+}
+
+/* End Slider */
+/* End Slider & Hot Word */
+/* End Container */
