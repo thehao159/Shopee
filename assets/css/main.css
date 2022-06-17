@@ -533,7 +533,40 @@
     height: 116px;
     background: url("https://cf.shopee.vn/file/78728c15fb11beee408bc2b91f0e11a3_xhdpi") top center / cover no-repeat;
 }
-
 /* End Slider */
+
+/* Hot Word */
+.hotword__wrapper {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.hotword__section {
+    min-height: 108px;
+    padding-top: 18px;
+    color: var(--text-color-bold);
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.hotword__section:hover {
+    transform: translateY(-1px);
+}
+
+.hotword__img {
+    width: 45px;
+    height: 45px;
+}
+
+.hotword__title {
+    width: 100%;
+    margin: 4px 0 8px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    word-spacing: 0.1rem;
+}
+/* End Hot Word */
 /* End Slider & Hot Word */
 /* End Container */
