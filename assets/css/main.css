@@ -440,13 +440,12 @@
 .container {
     margin-top: 120px;
     background-color: var(--bg-color-blur);
-    height: 5000px;
 }
-
 
 .slider-hotword {
     padding-top: 30px;
     background-color: var(--bg-color-light);
+    box-shadow: 00 1px 1px 0px rgb(0, 0, 0, 0.06);
 }
 /* Slider & Hot Word */
 /* Slider */
@@ -569,4 +568,17 @@
 }
 /* End Hot Word */
 /* End Slider & Hot Word */
+
+/* Content */
+.content {
+    width: 100%;
+}
+/* Banner */
+.banner {
+    margin-top: 20px;
+    height: 110px;
+    background: url("https://cf.shopee.vn/file/0ed0d80b26a4a8dc8f8652679f37604d") top center / cover no-repeat;
+}
+/* End Banner */
+/* End Content */
 /* End Container */
