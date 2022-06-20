@@ -49,6 +49,7 @@ html {
     border-radius: 2px;
 }
 
+/* Header Common */
 .popover {
     background-color: var(--bg-color-light);
     animation: headerItemGrowth 0.3s ease;
@@ -85,4 +86,59 @@ html {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/* Content Common */
+.content__section {
+    margin-top: 20px;
+    background-color: var(--bg-color-light);
+}
+
+.content__heading-section {
+    padding: 22px 20px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.content__arrow {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    background-color: var(--bg-color-light);
+    border-radius: 50%;
+    box-shadow: 0 0px 14px -6px #000;
+    transition: transform 0.05s linear;
+    cursor: pointer;
+}
+
+.content__left-arrow {
+    display: none;
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.content__right-arrow {
+    display: block;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+}
+
+.content__left-arrow:hover {
+    transform: translateY(-50%) translateX(-50%) scale(1.5);
+}
+
+.content__right-arrow:hover {
+    transform: translateY(-50%) translateX(50%) scale(1.5);
+}
+
+.content__arrow-icon {
+    display: flex;
+    color: var(--text-color-normal);
+}
+
+.content__arrow-icon::before {
+    line-height: 25px;
+    font-size: 1.0rem;
+    margin: auto;
+
 }
