@@ -641,6 +641,7 @@
 }
 
 .catagogy__item {
+    min-height: 150px;
     flex: 0 0 7.69231%;
     max-width: 7.69231%;
 }
@@ -684,5 +685,247 @@
     display: none;
 }
 /* End Categogy */
+
+/* Flash Sale */
+.flash-sale__wrapper {
+    width: 100%;
+}
+
+.flash-sale__header-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flash-sale__header-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.flash-sale__title {
+    width: 130px;
+    height: 26px;
+    margin-top: 4px;
+    background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/flashsale/fb1088de81e42c4e538967ec12cb5caa.png") top center / contain no-repeat;
+}
+
+.flash-sale__time-cd-wrapper {
+    display: inline-flex;
+    margin-left: 14px;
+}
+
+.flash-sale__time-cd {
+    margin-left: 4px;
+    background-color: var(--bg-color-bold);
+    border: 1px solid #9b9b9b;
+    border-radius: 2px;
+    font-size: 0;
+    line-height: 8px;
+}
+
+.flash-sale__time-number-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flash-sale__time-number-item {
+    display: flex;
+    width: 10px;
+    height: 16px;
+}
+
+.flash-sale__time-number-item--left {
+    padding-left: 1px;
+}
+
+.flash-sale__time-number-item--right {
+    padding-right: 1px;
+}
+
+.flash-sale__time-number {
+    margin: auto;
+    width: 8px;
+    height: 10px;
+}
+
+.flash-sale__header-link {
+    padding: 5px 6px;
+    color: var(--text-color-highlight);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.flash-sale__header-link-icon {
+    font-size: 1.2rem;
+    margin: 2px;
+}
+
+.flash-sale__list-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.flash-sale__list-section {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.flash-sale__list {
+    display: flex;
+    width: 183.33333%;
+    margin: 0;
+    padding: 0;
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out;
+}
+
+.flash-sale__item {
+    display: flex;
+    flex: 0 0 9.09091%;
+    max-width: 9.09091%;
+    min-height: 240px;
+}
+
+#flash-sale__list-check-move {
+    display: none;
+}
+
+.flash-sale__item-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.flash-sale__item-content {
+    position: relative;
+    display: flex;
+}
+
+.flash-sale__img-section {
+    position: relative;
+    margin: 5px auto;
+    line-height: 0;
+}
+
+.flash-sale__item-img {
+    width: 172px;
+    height: 172px;
+}
+
+.flash-sale__item-promo-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 172px;
+    height: 172px;
+    background: url("https://cf.shopee.vn/file/676ef20114b5a9e973b7cca3e2ad417e_tn") top center / cover no-repeat;
+}
+
+.flash-sale__item-sale-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 6px 0;
+    background-color: var(--bg-color-sale-off);
+    font-size: 1.7rem;
+    color: var(--text-color-bright);
+    text-transform: uppercase;
+}
+
+.flash-sale__item-sale-off::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    border-style: solid;
+    border-width: 6px 27px;
+    border-color: var(--bg-color-sale-off) var(--bg-color-sale-off) transparent var(--bg-color-sale-off);
+}
+
+.flash-sale__item-sale-off-perc {
+    display: block;
+    padding-bottom: 4px;
+    color: var(--text-color-highlight);
+    text-align: center;
+}
+
+.flash-sale__item-footer {
+    display: block;
+    padding: 0 16px 16px;
+}
+
+.flash-sale__item-price {
+    display: flex;
+    color: var(--text-color-highlight);
+    font-size: 2.1rem;
+    line-height: 26px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flash-sale__item-unit {
+    margin-right: 4px;
+    font-size: 1.0rem;
+    text-decoration: underline;
+}
+
+.flash-sale__item-purchased-section {
+    display: block;
+    padding: 0 6px;
+}
+
+.flash-sale__item-purchased {
+    position: relative;
+    display: block;
+    height: 16px;
+    background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/flashsale/ac7f81d9ee062223753413ec98497a86.png") top center / cover no-repeat;
+}
+
+.flash-sale__item-purchased-amount {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: var(--bg-color-light);
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.flash-sale__item-not-purchased {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 95%;
+    height: 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgba(255, 189, 166, 0.9);
+}
+
+.flash-sale__list-section:hover .content__left-arrow {
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+}
+
+.flash-sale__list-section:hover .content__right-arrow {
+    transform: translateX(50%) translateY(-50%) scale(1.5);
+}
+
+#flash-sale__list-check-move:checked + .flash-sale__list {
+    transform: translateX(-1000px);
+}
+
+#flash-sale__list-check-move:checked ~ .content__left-arrow {
+    display: block;
+}
+
+#flash-sale__list-check-move:checked ~ .content__right-arrow {
+    display: none;
+}
+/* End Flash Sale */
 /* End Content */
 /* End Container */

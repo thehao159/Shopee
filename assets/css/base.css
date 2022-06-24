@@ -4,10 +4,13 @@
     --theme-color-gradient: linear-gradient(#f53e2d, #ff6433);
     --bg-color-light: #fff;
     --bg-color-blur: #f5f5f5;
+    --bg-color-bold: #000;
+    --bg-color-sale-off: rgba(255, 212, 36, 0.9);
     --text-color-normal: #333;
     --text-color-bold: #000;
     --text-color-blur: #7c7a77;
     --text-color-bright: #fff;
+    --text-color-highlight: #ee4d2d;
     --text-hover-color: #ee4d2d;
     --border-color: rgba(0, 0, 0, .2);
 }
@@ -94,10 +97,13 @@ html {
     background-color: var(--bg-color-light);
 }
 
-.content__heading-section {
-    padding: 22px 20px;
+.content__header-section {
+    display: flex;
+    height: 60px;
+    padding: 0 20px;
     font-size: 1.7rem;
     font-weight: 400;
+    align-items: center;
 }
 
 .content__arrow {
