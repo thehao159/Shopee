@@ -580,6 +580,10 @@
     width: 100%;
 }
 
+.banner {
+    position: relative;
+}
+
 .banner--full {
     width: 100%;
 }
@@ -588,12 +592,32 @@
     text-decoration: none;
 }
 
+.banner__link--full {
+    width: 100%;
+}
+
+.banner__link--third {
+    width: 33.33333%;
+}
+
 .banner__img {
     height: 110px;
 }
 
 .banner__img--big {
     background: url("https://cf.shopee.vn/file/0ed0d80b26a4a8dc8f8652679f37604d") top center / cover no-repeat;
+}
+
+.banner__img-composite {
+    background: url("https://cf.shopee.vn/file/2aa4b8deb8b552bc32de2bdb2e400ce0") top center / cover no-repeat;
+}
+
+.banner__split-composite {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 110px;
 }
 /* End Banner */
 
