@@ -12,7 +12,7 @@
     --text-color-bright: #fff;
     --text-color-highlight: #ee4d2d;
     --text-hover-color: #ee4d2d;
-    --border-color: rgba(0, 0, 0, .2);
+    --border-color: rgba(0, 0, 0, 0.05);
 }
 
 * {
