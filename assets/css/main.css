@@ -780,8 +780,8 @@
 }
 
 .flash-sale__header-link-icon {
-    font-size: 1.2rem;
     margin: 2px;
+    font-size: 1.2rem;
 }
 
 .flash-sale__list-wrapper {
@@ -802,7 +802,7 @@
     margin: 0;
     padding: 0;
     transform: translateX(0);
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .flash-sale__item {
@@ -1203,5 +1203,124 @@
     height: 100px;
 }
 /* End Search Trending */
+
+/* Top Search */
+.top-search__wrapper {
+    display: block;
+    width: 100%;
+}
+
+.top-search__header-section {
+    justify-content: space-between;
+}
+
+.top-search__header-titile {
+    color: var(--text-color-highlight);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.top-search__header-link {
+    padding: 6px;
+    color: var(--text-color-highlight);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.top-search__header-link-icon {
+    margin: 2px;
+    font-size: 1.2rem;
+}
+
+.top-search__list-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.top-search__list-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-search__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 183.33333%;
+    list-style: none;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.top-search__item {
+    position: relative;
+    flex: 0 0 9.09091%;
+    max-width: 9.09091%;
+    height: 100%;
+    padding: 20px 10px;
+}
+
+.top-search__item-link {
+    line-height: 2.5rem;
+    text-decoration: none;
+}
+
+.top-search__item-img {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: url("https://cf.shopee.vn/file/c8169887b60e20a161d0288e6f9a193e") top center / cover no-repeat;
+}
+
+.top-search__item-top-flag {
+    position: absolute;
+    width: 32px;
+    height: 40px;
+    background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/06720e49514cbd94b7552496b4de454a.png") top center / cover no-repeat;
+}
+
+.top-search__item-purchased {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--text-color-bright);
+    background-color: #bdbdbd;
+    font-size: 1.4rem;
+    font-weight: 350;
+    text-align: center;
+}
+
+.top-search__item-titile {
+    margin-top: 20px;
+    color: var(--text-color-normal);
+    font-size: 1.8rem;
+}
+
+#top-search__list-check-move {
+    display: none;
+}
+
+#top-search__list-check-move:checked + .top-search__list {
+    transform: translateX(-1000px);
+}
+
+#top-search__list-check-move:checked ~ .content__left-arrow {
+    display: block;
+}
+
+#top-search__list-check-move:checked ~ .content__right-arrow {
+    display: none;
+}
+
+.top-search__list:hover ~ .content__left-arrow {
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+}
+
+.top-search__list:hover ~ .content__right-arrow {
+    transform: translateX(50%) translateY(-50%) scale(1.5);
+}
+/* End Top Search */
 /* End Content */
 /* End Container */
