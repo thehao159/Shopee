@@ -11,7 +11,6 @@
     --text-color-blur: #7c7a77;
     --text-color-bright: #fff;
     --text-color-highlight: #ee4d2d;
-    --text-hover-color: #ee4d2d;
     --border-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -33,7 +32,6 @@ html {
 
 .btn {
     display: block;
-    border: none;
     padding: 0;
     color: var(--text-color-normal);
     font-size: 1.4rem;
@@ -43,7 +41,7 @@ html {
 }
 
 .btn:hover {
-    color: var(--text-hover-color);
+    color: var(--text-color-highlight);
     background-color: rgba(0, 0, 0, .06);
 }
 
