@@ -837,6 +837,7 @@
 .flash-sale__item-img {
     width: 172px;
     height: 172px;
+    background: url("https://cf.shopee.vn/file/b8bd40ec1340c661442fac25f7c0664b") top center / cover no-repeat;
 }
 
 .flash-sale__item-promo-title {
@@ -1269,13 +1270,14 @@
 
 .top-search__item-img {
     position: relative;
-    width: 180px;
-    height: 180px;
+    padding-top: 100%;
     background: url("https://cf.shopee.vn/file/c8169887b60e20a161d0288e6f9a193e") top center / cover no-repeat;
 }
 
 .top-search__item-top-flag {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 32px;
     height: 40px;
     background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/06720e49514cbd94b7552496b4de454a.png") top center / cover no-repeat;
@@ -1407,7 +1409,8 @@
 }
 
 .recommend-products__item-img {
-    width: 100%;
+    padding-top: 100%;
+    background: url("https://cf.shopee.vn/file/ab4992cb80423abd5e5ac6de9e9775ff_tn") top center / cover no-repeat;
 }
 
 .recommend-products__item-favorite {
