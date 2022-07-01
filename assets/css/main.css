@@ -1383,9 +1383,10 @@
 
 .recommend-products__item-link {
     position: relative;
-    margin: 0 5px 10px;
+    margin-bottom: 10px;
     display: block;
     border: 1px solid #fff;
+    height: 282px;
     background-color: var(--bg-color-light);
     line-height: 0;
     box-shadow: 0 0 4px -2px #333;
@@ -1425,8 +1426,8 @@
     display: block;
     position: absolute;
     top: 16px;
-    left: -1px;
-    border-width: 3px 3px;
+    left: 0px;
+    border-width: 2px 2px;
     border-color: #99452a #99452a transparent transparent;
     border-style: solid;
 }
