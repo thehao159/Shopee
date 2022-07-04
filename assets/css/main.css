@@ -853,7 +853,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 6px 6px 0;
+    padding: 6px 4px 2px;
+    width: 50px;
+    height: 44px;
     background-color: var(--bg-color-sale-off);
     font-size: 1.7rem;
     color: var(--text-color-bright);
@@ -864,10 +866,10 @@
     content: "";
     display: block;
     position: absolute;
-    top: 42px;
     right: 0;
+    bottom: -8px;
     border-style: solid;
-    border-width: 6px 27px;
+    border-width: 0px 25px 8px;
     border-color: var(--bg-color-sale-off) var(--bg-color-sale-off) transparent var(--bg-color-sale-off);
 }
 
@@ -1388,11 +1390,15 @@
     margin-bottom: 10px;
     display: block;
     border: 1px solid #fff;
+    border-radius: 2px;
     height: 282px;
     background-color: var(--bg-color-light);
     line-height: 0;
-    box-shadow: 0 0 4px -2px #333;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
     text-decoration: none;
+    overflow: hidden;
+    transition: transform linear 0.1s;
+    will-change: transform;
 }
 
 .recommend-products__item-link:hover {
@@ -1401,6 +1407,8 @@
     border-top-right-radius: 2px;
     border: 1px solid #ee4d2d;
     transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgb(0, 0, 0, 0.05);
+    overflow: initial;
 }
 
 .recommend-products__item-representative-photo {
@@ -1417,6 +1425,8 @@
     position: absolute;
     top: 10px;
     left: -4px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
     padding: 0 5px;
     color: var(--text-color-bright);
     background-color: #f25220;
@@ -1430,9 +1440,8 @@
     position: absolute;
     top: 16px;
     left: 0px;
-    border-width: 2px 2px;
-    border-color: #99452a #99452a transparent transparent;
-    border-style: solid;
+    border-top: 4px solid #99452a;
+    border-left: 4px solid transparent;
 }
 
 .recommend-products__item-sale-off {
@@ -1454,9 +1463,9 @@
     content: "";
     display: block;
     position: absolute;
-    top: 28px;
     right: 0;
-    border-width: 4px 18px;
+    bottom: -4px;
+    border-width: 0 18px 4px;
     border-style: solid;
     border-color: transparent var(--bg-color-sale-off) transparent var(--bg-color-sale-off);
 }
