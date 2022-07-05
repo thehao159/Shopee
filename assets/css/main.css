@@ -331,7 +331,6 @@
 }
 
 .header__suggest-img--no-text {
-    width: 120px;
     height: 24px;
 }
 
@@ -1161,7 +1160,7 @@
     margin-right: 2px;
 }
 
-.search-trending__header-titile {
+.search-trending__header-title {
     color: var(--text-color-blur);
     font-size: 1.6rem;
 }
@@ -1187,10 +1186,10 @@
     overflow: hidden;
 }
 
-.search-trending__item-titile {
-    white-space: nowrap;
+.search-trending__item-title {
     color: var(--text-color-normal);
     font-size: 1.4rem;
+    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -1218,7 +1217,7 @@
     justify-content: space-between;
 }
 
-.top-search__header-titile {
+.top-search__header-title {
     color: var(--text-color-highlight);
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -1297,10 +1296,18 @@
     text-align: center;
 }
 
-.top-search__item-titile {
+.top-search__item-title {
+    display: block;
+    display: -webkit-box;
     margin-top: 20px;
+    height: 50px;
     color: var(--text-color-normal);
     font-size: 1.8rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 #top-search__list-check-move {
@@ -1364,7 +1371,7 @@
     border-bottom: 4px solid #ef5334;
 }
 
-.recommend-products__header-group-titile {
+.recommend-products__header-group-title {
     display: flex;
     height: 20px;
     color: var(--text-color-highlight);
@@ -1380,8 +1387,7 @@
 }
 
 .recommend-products__content-section {
-    width: 100%;
-    margin-top: 5px;
+    padding: 5px 5px 0;
 }
 
 
@@ -1413,6 +1419,8 @@
 }
 
 .recommend-products__item-img {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     padding-top: 100%;
     background: url("https://cf.shopee.vn/file/ab4992cb80423abd5e5ac6de9e9775ff_tn") top center / cover no-repeat;
 }
@@ -1446,6 +1454,7 @@
     right: 0;
     width: 36px;
     height: 32px;
+    border-top-right-radius: 2px;
     padding-top: 4px;
     color: var(--text-color-bright);
     background-color: var(--bg-color-sale-off);
@@ -1472,7 +1481,7 @@
     line-height: 1.2rem;
 }
 
-.recommend-products__item-promo-titile {
+.recommend-products__item-promo-title {
     position: absolute;
     top: 0;
     left: 0;
@@ -1487,7 +1496,8 @@
     line-height: 1.6rem;
 }
 
-.recommend-products__item-titile {
+.recommend-products__item-title {
+    display: block;
     display: -webkit-box;
     height: 28px;
     margin: 0;
