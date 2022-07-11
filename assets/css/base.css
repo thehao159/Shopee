@@ -11,7 +11,9 @@
     --text-color-blur: #7c7a77;
     --text-color-bright: #fff;
     --text-color-highlight: #ee4d2d;
-    --border-color: rgba(0, 0, 0, 0.05);
+    --border-color-blur: rgba(0, 0, 0, 0.05);
+    --border-color-footer: rgba(0, 0, 0, 0.1);
+    --border-color-highlight: #ee4d2d;
 }
 
 * {
@@ -144,5 +146,23 @@ html {
     line-height: 25px;
     font-size: 1.0rem;
     margin: auto;
+}
 
+/* Footer Common */
+.footer__content-section {
+    padding: 42px 0 38px 0;
+}
+
+.footer__heading-section {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__heading-section--main {
+    padding-top: 18px;
+    font-size: 1.4rem;
+}
+
+.footer__heading-section--small {
+    font-size: 1.2rem;
 }
