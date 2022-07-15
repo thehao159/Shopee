@@ -28,6 +28,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
         <header class="header">
             <div class="grid wide">
                 <!-- Nav -->
-                <div class="nav">
+                <div class="nav hide-on-mobile-tablet">
                     <ul class="nav__list">
                         <li class="nav__item nav__item--seperate">
                             <span class="nav__touch nav__touch--enable"><a href="#">Kênh Người Bán</a></span>
@@ -49,19 +50,15 @@
                             <span class="nav__touch nav__touch--enable"><a href="#">Tải ứng dụng</a></span>
                             <div class="nav__sub-download">
                                 <div class="nav__qr">
-                                    <div class="row no-gutter">
-                                        <img class="col l-12" src="./assets/imgs/qr_code/app-qr-code.png" alt="QR Code">
-                                    </div>
+                                    <img class="nav__qr-img" src="./assets/imgs/qr_code/app-qr-code.png" alt="QR Code">
                                 </div>
                                 <div class="nav__apps-store">
-                                    <div class="row sm-gutter">
-                                        <img class="col l-6" src="./assets/imgs/icons/app_store.png"
-                                            alt="App Store">
-                                        <img class="col l-6" src="./assets/imgs/icons/google_play.png"
-                                            alt="Google Play">
-                                        <img class="col l-6" src="./assets/imgs/icons/app_gallery.png"
-                                            alt="App Gallery">
-                                    </div>
+                                    <img class="nav__apps-store-img" src="./assets/imgs/icons/app_store.png"
+                                        alt="App Store">
+                                    <img class="nav__apps-store-img" src="./assets/imgs/icons/google_play.png"
+                                        alt="Google Play">
+                                    <img class="nav__apps-store-img" src="./assets/imgs/icons/app_gallery.png"
+                                        alt="App Gallery">
                                 </div>
                             </div>
                         </li>
@@ -94,11 +91,9 @@
                                             Thông báo</div>
                                     </div>
                                 </div>
-                                <div class="nav__notify-footer nav__notify-footer--no-user">
-                                    <div class="row no-gutter">
-                                        <div class="col l-6 btn">Đăng ký</div>
-                                        <div class="col l-6 btn">Đăng nhập</div>
-                                    </div>
+                                <div class="nav__notify-footer">
+                                    <a href="#" class="nav__notify-footer-btn nav__notify-footer-btn--no-user btn">Đăng ký</a>
+                                    <a href="#" class="nav__notify-footer-btn nav__notify-footer-btn--no-user btn">Đăng nhập</a>
                                 </div>
                             </div>
                         </li>
@@ -117,13 +112,9 @@
                                 <i class="fa-solid fa-angle-down"></i>
                             </span>
                             <div class="nav__popover-language popover border">
-                                <div class="row no-gutter nav__languages">
-                                    <div class="col l-12 btn">
-                                        <div class="nav__language nav__language--selected">Tiếng Việt</div>
-                                    </div>
-                                    <div class="col l-12 btn">
-                                        <div class="nav__language">English</div>
-                                    </div>
+                                <div class="nav__languages">
+                                    <div class="nav__language nav__language--selected btn">Tiếng Việt</div>
+                                    <div class="nav__language btn">English</div>
                                 </div>
                             </div>
                         </li>
@@ -138,9 +129,9 @@
                 <!-- End Nav -->
 
                 <!-- Header With Search -->
-                <div class="row no-gutter header-with-search">
+                <div class="header-with-search">
                     <!-- Logo -->
-                    <a href="/" class="col l-2 header__logo">
+                    <a href="/" class="header__logo hide-on-mobile">
                         <svg viewBox="0 0 192 65" class="header__logo-img">
                             <g fill-rule="evenodd">
                                 <path fill="#fff"
@@ -152,7 +143,7 @@
                     <!-- End Logo -->
 
                     <!-- Search -->
-                    <div class="col l-8 header__search">
+                    <div class="header__search">
                         <div class="header__search-bar">
                             <div class="header__search-inp-wrapper">
                                 <input type="text" class="header__search-inp" placeholder="GIÁ GIẢM THÀNH VIÊN -50%">
@@ -169,7 +160,7 @@
                                 <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
                             </button>
                         </div>
-                        <div class="header__search-recommend">
+                        <div class="header__search-recommend hide-on-mobile-tablet">
                             <a href="#" class="header__recommend-item">Váy</a>
                             <a href="#" class="header__recommend-item">Dép</a>
                             <a href="#" class="header__recommend-item">Áo Phông</a>
@@ -183,10 +174,10 @@
                     <!-- End Search -->
 
                     <!-- Cart -->
-                    <div class="col l-2 header__cart-wrapper">
+                    <div class="header__cart-wrapper">
                         <div class="header__cart">
-                            <a href="#" class="header__cart-icon">
-                                <i class="fa-solid fa-cart-shopping"></i>
+                            <a href="#" class="header__cart-link">
+                                <i class="fa-solid fa-cart-shopping header__cart-icon"></i>
                             </a>
                             <div class="header__popover-cart popover border">
                                 <div class="cart-list cart-list--empty">
@@ -196,9 +187,16 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- End Cart -->
+
+                    <!-- User -->
+                    <div class="header__user-wrapper hide-on-mobile">
+                        <a href="#" class="header__user-link">
+                            <i class="header__user-icon fa-solid fa-user"></i>
+                        </a>
+                    </div>
+                    <!-- End User -->
                 </div>
                 <!-- Header With Search -->
             </div>

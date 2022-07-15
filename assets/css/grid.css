@@ -291,7 +291,7 @@
 /* Tablet -> PC medium resolution -- (nếu sử dụng wide) */
 @media (min-width: 740px) and (max-width: 1023px) {
     .wide {
-        max-width: 644px;
+        width: 644px;
     }
 }
 
@@ -300,7 +300,7 @@
 /* >= PC medium resolution -- (nếu sử dụng wide) */
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
-        max-width: 984px;
+        width: 984px;
     }
 
     .wide .row {

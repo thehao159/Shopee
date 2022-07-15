@@ -1,0 +1,124 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    /* Header */
+    .header__cart-wrapper {
+        margin-bottom: 0;
+    }
+    
+    .header__search {
+        margin-top: 0;
+    }
+
+    .header__cart-wrapper,
+    .header__user-wrapper {
+        width: 12%;
+        justify-content: flex-end;
+    }
+
+    .header__cart:hover .header__popover-cart {
+        display: none;
+    }
+
+    .header__user-wrapper {
+        display: flex;
+    }
+    /* End Header */
+}
+/* End Mobile & Tablet */
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    /* Header */
+    .header {
+        height: 68px;
+    }
+
+    .header-with-search {
+        height: 68px;
+        padding: 0;
+    }
+
+    .header__logo {
+        margin-bottom: 4px;
+    }
+
+    .header__logo-img {
+        padding-right: 14px;
+    }
+
+    .header__search-suggest-wrapper {
+        width: 100%;
+    }
+    /* End Header */
+}
+/* End Tablet */
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    /* Header */
+    /* Header */
+    .header {
+        position: initial;
+        height: 56px;
+        background-image: none;
+    }
+
+    .header-with-search {
+        height: 56px;
+        padding: 0 28px;
+    }
+
+    .header__search-btn {
+        width: 40px;
+        background-color: var(--bg-color-light);
+    }
+
+    .header__search-btn:hover {
+        background-color: var(--bg-color-light);
+    }
+
+    .header__search-inp::placeholder {
+        color: var(--text-color-highlight);
+    }
+
+    .header__search-icon {
+        color: #cacaca;
+    }
+
+    .header__search-suggest-wrapper {
+        top: 48px;
+        width: 100vw;
+        left: -28px;
+        box-shadow: -8px 4px 24px -13px #333;
+        animation: headerItemGrowtMobile 0.2s ease;
+    }
+
+    .header__cart-wrapper {
+        width: 18%;
+    }
+
+    @keyframes headerItemGrowtMobile {
+        from {
+            opacity: 0;
+            transform: translateY(-50%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* End Header */
+}
+/* End Mobile */
