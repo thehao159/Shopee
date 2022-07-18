@@ -27,6 +27,14 @@
         display: flex;
     }
     /* End Header */
+
+    /* Container */
+    /* Slider & Hot Word */
+    .slider__left-section {
+        width: 100%;
+    }
+    /* End Slider & Hot Word */
+    /* End Container */
 }
 /* End Mobile & Tablet */
 
@@ -58,6 +66,14 @@
         width: 100%;
     }
     /* End Header */
+
+    /* Container */
+    .container {
+        margin-top: 68px;
+    }
+    /* Slider & Hot Word */
+    /* End Slider & Hot Word */
+    /* End Container */
 }
 /* End Tablet */
 
@@ -70,7 +86,7 @@
     /* Header */
     /* Header */
     .header {
-        position: initial;
+        position: absolute;
         height: 56px;
         background-image: none;
     }
@@ -120,5 +136,59 @@
         }
     }
     /* End Header */
+
+    /* Container */
+    .container {
+        margin-top: 0;
+    }
+
+    /* Slider & Hot Word */
+    .slider-hotword {
+        padding-top: 0;
+    }
+
+    .slider__left-bg {
+        padding-top: 40%;
+        max-height: 174px;
+        background-image: url("https://cf.shopee.vn/file/dad1d450bf8f1b106c60b24f9d0f4e2f");
+        background-position: bottom center;
+        background-size: cover;
+    }
+
+    .hotword__wrapper {
+        margin: 0;
+        background-color: var(--bg-color-mobile);
+        overflow-x: auto;
+    }
+
+    .hotword__wrapper::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .hotword__wrapper::-webkit-scrollbar-button {
+        display: block;
+        background: var(--bg-color-mobile);
+        width: 23.4%;
+    }
+
+    .hotword__wrapper::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 2px;
+    }
+    
+    .hotword__wrapper::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: #000;
+    }
+
+    .hotword__section {
+        width: 120%;
+    }
+
+    .hotword__title {
+        padding: 0 2px;
+    }
+    /* End Slider & Hot Word */
+    /* End Container */
 }
 /* End Mobile */
