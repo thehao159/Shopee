@@ -305,7 +305,7 @@ a.nav__notify-footer-btn {
     display: flex;
     width: 60px;
     height: 34px;
-    background: #fb5533;
+    background-color: #fb5533;
     margin: 3px;
     border: none;
     border-radius: 2px;
@@ -360,7 +360,11 @@ a.nav__notify-footer-btn {
 }
 
 .header__suggest-img--no-text {
+    width: 24px;
     height: 24px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header__suggest-title--no-text,
@@ -527,7 +531,6 @@ a.nav__notify-footer-btn {
 
 .slider__left-bg {
     height: 236px;
-    background-image: url("https://cf.shopee.vn/file/41ca0343cc8b5e47e4c9c6e4bce54924_xxhdpi");
     background-position: top center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -572,18 +575,31 @@ a.nav__notify-footer-btn {
 
 .slider__right-bg {
     height: 116px;
-}
-
-.slider__right-bg--top {
-    background: url("https://cf.shopee.vn/file/2f92a6a822404b45e4f5a3ec2fdd3319_xhdpi") top center / 100% 100% no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .slider__right-link--bottom {
     margin-top: 4px;
 }
 
-.slider__right-bg--bottom {
-    background: url("https://cf.shopee.vn/file/78728c15fb11beee408bc2b91f0e11a3_xhdpi") top center / 100% 100% no-repeat;
+.slider__mobile-section {
+    display: none;
+    width: 100%;
+}
+
+.slider__mobile-link {
+    display: block;
+    color: transparent;
+    text-decoration: none;
+}
+
+.slider__mobile-bg {
+    padding-top: 40%;
+    max-height: 174px;
+    background-position: bottom center;
+    background-size: cover;
 }
 /* End Slider */
 
@@ -624,21 +640,15 @@ a.nav__notify-footer-btn {
 
 /* Content */
 .content {
+    display: flex;
     width: 100%;
     padding-bottom: 70px;
 }
 
 /* Banner */
 .banner__wrapper {
-    display: block;
-    width: 100%;
-}
-
-.banner {
     position: relative;
-}
-
-.banner--full {
+    display: block;
     width: 100%;
 }
 
@@ -651,19 +661,16 @@ a.nav__notify-footer-btn {
 }
 
 .banner__link--third {
+    display: block;
     width: 33.33333%;
 }
 
 .banner__img {
+    width: 100%;
     height: 110px;
-}
-
-.banner__img--big {
-    background: url("https://cf.shopee.vn/file/0ed0d80b26a4a8dc8f8652679f37604d") top center / cover no-repeat;
-}
-
-.banner__img-composite {
-    background: url("https://cf.shopee.vn/file/2aa4b8deb8b552bc32de2bdb2e400ce0") top center / cover no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .banner__split-composite {
@@ -890,7 +897,9 @@ a.nav__notify-footer-btn {
 .flash-sale__item-img {
     width: 172px;
     height: 172px;
-    background: url("https://cf.shopee.vn/file/b8bd40ec1340c661442fac25f7c0664b") top center / cover no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .flash-sale__item-promo-title {
@@ -899,7 +908,9 @@ a.nav__notify-footer-btn {
     left: 0;
     width: 172px;
     height: 172px;
-    background: url("https://cf.shopee.vn/file/676ef20114b5a9e973b7cca3e2ad417e_tn") top center / cover no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .flash-sale__item-sale-off {
@@ -1090,6 +1101,9 @@ a.nav__notify-footer-btn {
 .mall__slider-img {
     width: 100%;
     height: 100%;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mall__arrow {
@@ -1154,7 +1168,9 @@ a.nav__notify-footer-btn {
     width: 100%;
     height: 100%;
     padding: 10px;
-    background: url("https://cf.shopee.vn/file/ba2a09062ee7dec6181cdb06b9de38d6_xhdpi") top center / cover no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mall__item-promo {
@@ -1235,7 +1251,6 @@ a.nav__notify-footer-btn {
 }
 
 .search-trending__item-desc {
-    width: 100%;
     padding: 20px;
     overflow: hidden;
 }
@@ -1258,6 +1273,9 @@ a.nav__notify-footer-btn {
     margin-right: 10px;
     width: 100px;
     height: 100px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /* End Search Trending */
 
@@ -1326,7 +1344,9 @@ a.nav__notify-footer-btn {
 .top-search__item-img {
     position: relative;
     padding-top: 100%;
-    background: url("https://cf.shopee.vn/file/c8169887b60e20a161d0288e6f9a193e") top center / cover no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .top-search__item-top-flag {
@@ -1402,42 +1422,21 @@ a.nav__notify-footer-btn {
     position: sticky;
     top: 120px;
     display: flex;
+    border-bottom: 4px solid var(--border-color-highlight);
     background-color: var(--bg-color-light);
     box-shadow: 0 4px 4px -6px #333;
     align-items: center;
 }
 
-.recommend-products__header-group {
-    position: relative;
-    padding: 20px 50px;
-    cursor: pointer;
-}
-
-.recommend-products__header-group-marked {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 4px solid #fff;
-}
-
-.recommend-products__header-group--selected > .recommend-products__header-group-marked {
-    border-bottom: 4px solid var(--border-color-highlight);
-}
-
-.recommend-products__header-group-title {
+.recommend-products__header-title {
     display: flex;
-    height: 20px;
+    width: 100%;
+    padding: 20px 0;
     color: var(--text-color-highlight);
-    font-size: 1.6rem;
-    font-weight: 450;
+    font-size: 1.7rem;
     text-transform: uppercase;
+    justify-content: center;
     align-items: center;
-}
-
-.recommend-products__header-group-img {
-    width: 160px;
-    height: 20px;
 }
 
 .recommend-products__content-section {
@@ -1476,7 +1475,9 @@ a.nav__notify-footer-btn {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     padding-top: 100%;
-    background: url("https://cf.shopee.vn/file/ab4992cb80423abd5e5ac6de9e9775ff_tn") top center / cover no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .recommend-products__item-favorite {
@@ -1541,7 +1542,9 @@ a.nav__notify-footer-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("https://cf.shopee.vn/file/958056d36563b56843d4b02cf1d82362") top center / cover no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .recommend-products__item-desc {
