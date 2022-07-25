@@ -28,9 +28,9 @@
     }
     /* End Header */
 
-    /* Content */
+    /* Container */
 
-    /* End Content */
+    /* End Container */
 }
 /* End Mobile & Tablet */
 
@@ -73,10 +73,6 @@
         width: 100%;
     }
     /* End Slider & Hot Word */
-    
-    /* Content */
-
-    /* End Content */
     /* End Container */
 }
 /* End Tablet */
@@ -188,15 +184,11 @@
     }
     /* End Slider & Hot Word */
 
-    /* Content */
     /* Banner */
-    
+    .mobile-banner {
+        display: block;
+    }
     /* End Banner */
-
-    /* Categogy */
-    
-    /* End Categogy */
-    /* End Content */
     /* End Container */
 }
 /* End Mobile */
