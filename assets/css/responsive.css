@@ -29,7 +29,19 @@
     /* End Header */
 
     /* Container */
+    .content__arrow {
+        display: none;
+    }
 
+    /* category */
+    .category__list-section {
+        overflow-x: auto;
+    }
+
+    .category__list-section::-webkit-scrollbar {
+        display: none;
+    }
+    /* End category */
     /* End Container */
 }
 /* End Mobile & Tablet */
@@ -73,6 +85,12 @@
         width: 100%;
     }
     /* End Slider & Hot Word */
+
+    /* category */
+    .category__list {
+        width: 236%;
+    }
+    /* End category */
     /* End Container */
 }
 /* End Tablet */
@@ -189,6 +207,12 @@
         display: block;
     }
     /* End Banner */
+
+    /* category */
+    .category__list {
+        width: 358%;
+    }
+    /* End category */
     /* End Container */
 }
 /* End Mobile */
