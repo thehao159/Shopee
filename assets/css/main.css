@@ -1108,7 +1108,7 @@ a.nav__notify-footer-btn {
     width: 100%;
     height: 100%;
     background-position: top center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -1152,6 +1152,8 @@ a.nav__notify-footer-btn {
 }
 
 .mall__list {
+    display: flex;
+    flex-wrap: wrap;
     width: 200%;
     margin-top: 0;
     margin-bottom: 0;
@@ -1162,20 +1164,21 @@ a.nav__notify-footer-btn {
 }
 
 .mall__item {
-    height: 232px;
+    width: 12.5%;
 }
 
 .mall__item-link {
+    display: block;
     text-decoration: none;
 }
 
 .mall__item-img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 232px;
     padding: 10px;
     background-position: top center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -1185,9 +1188,13 @@ a.nav__notify-footer-btn {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    padding: 0 8px;
     color: #d3111b;
     font-size: 1.8rem;
     text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #mall__list-check-move {
@@ -1195,7 +1202,7 @@ a.nav__notify-footer-btn {
 }
 
 #mall__list-check-move:checked + .mall__list {
-    transform: translateX(-800px);
+    transform: translateX(calc(-12.5% * 4));
 }
 
 #mall__list-check-move:checked ~ .content__left-arrow {

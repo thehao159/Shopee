@@ -52,6 +52,20 @@
         display: none;
     }
     /* End Flash Sale */
+
+    /* Mall */
+    .mall__list-section {
+        overflow-x: auto;
+    }
+
+    .mall__list-section::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mall__list {
+        flex-wrap: nowrap;
+    }
+    /* End Mall */
     /* End Container */
 }
 /* End Mobile & Tablet */
@@ -111,6 +125,12 @@
         transform: scale(0.9);
     }
     /* End Flash Sale */
+
+    /* Mall */
+    .mall__list {
+        width: 450%;
+    }
+    /* End Mall */
     /* End Container */
 }
 /* End Tablet */
@@ -180,6 +200,10 @@
         margin-top: 0;
     }
 
+    .content__header-section {
+        padding: 0 6px;
+    }
+
     /* Slider & Hot Word */
     .slider-hotword {
         padding-top: 0;
@@ -243,6 +267,16 @@
         transform: scale(0.75);
     }
     /* End Flash Sale */
+
+    /* Mall */
+    .mall__list {
+        width: 626%;
+    }
+
+    .mall__item-img {
+        height: 184px;
+    }
+    /* End Mall */
     /* End Container */
 }
 /* End Mobile */
