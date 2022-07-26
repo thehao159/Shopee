@@ -42,6 +42,16 @@
         display: none;
     }
     /* End category */
+
+    /* Flash Sale */
+    .flash-sale__list-section {
+        overflow-x: auto;
+    }
+
+    .flash-sale__list-section::-webkit-scrollbar {
+        display: none;
+    }
+    /* End Flash Sale */
     /* End Container */
 }
 /* End Mobile & Tablet */
@@ -91,6 +101,16 @@
         width: 236%;
     }
     /* End category */
+
+    /* Flash Sale */
+    .flash-sale__list {
+        width: 312%;
+    }
+
+    .flash-sale__item-sale-off {
+        transform: scale(0.9);
+    }
+    /* End Flash Sale */
     /* End Container */
 }
 /* End Tablet */
@@ -213,6 +233,16 @@
         width: 358%;
     }
     /* End category */
+
+    /* Flash Sale */
+    .flash-sale__list {
+        width: 436%;
+    }
+
+    .flash-sale__item-sale-off {
+        transform: scale(0.75);
+    }
+    /* End Flash Sale */
     /* End Container */
 }
 /* End Mobile */
