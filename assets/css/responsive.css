@@ -66,6 +66,12 @@
         flex-wrap: nowrap;
     }
     /* End Mall */
+
+    /* Search Trending */
+    .search-trending__item {
+        border: 1px solid var(--border-color-blur);
+    }
+    /* End Search Trending */
     /* End Container */
 }
 /* End Mobile & Tablet */
@@ -131,6 +137,12 @@
         width: 450%;
     }
     /* End Mall */
+
+    /* Search Trending */
+    .search-trending__item-img {
+        margin: 10px;
+    }
+    /* End Search Trending */
     /* End Container */
 }
 /* End Tablet */
@@ -201,7 +213,7 @@
     }
 
     .content__header-section {
-        padding: 0 6px;
+        padding: 0 8px;
     }
 
     /* Slider & Hot Word */
@@ -277,6 +289,18 @@
         height: 184px;
     }
     /* End Mall */
+
+    /* Search Trending */
+    .search-trending__item-desc {
+        padding: 8px;
+    }
+
+    .search-trending__item-img {
+        margin: 10px 5px;
+        width: 56px;
+        height: 56px;
+    }
+    /* End Search Trending */
     /* End Container */
 }
 /* End Mobile */

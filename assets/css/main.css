@@ -1248,14 +1248,14 @@ a.nav__notify-footer-btn {
     font-size: 1.6rem;
 }
 
-.search-trending__content-section {
-    width: 100%;
+.search-trending__list {
+    margin-top: 0;
+    margin-bottom: 0;
     border-top: 1px solid var(--border-color-blur);
+    padding: 0;
 }
 
 .search-trending__item {
-    display: flex;
-    text-decoration: none;
     border-right: 1px solid var(--border-color-blur);
 }
 
@@ -1263,8 +1263,14 @@ a.nav__notify-footer-btn {
     border: none;
 }
 
+.search-trending__link {
+    display: flex;
+    text-decoration: none;
+}
+
 .search-trending__item-desc {
-    padding: 20px;
+    flex: 1;
+    padding: 20px 10px 20px 20px;
     overflow: hidden;
 }
 
