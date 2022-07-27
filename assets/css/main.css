@@ -1305,6 +1305,7 @@ a.nav__notify-footer-btn {
 }
 
 .top-search__header-section {
+    border-bottom: 1px solid var(--border-color-blur);
     justify-content: space-between;
 }
 
@@ -1348,20 +1349,22 @@ a.nav__notify-footer-btn {
 }
 
 .top-search__item {
-    position: relative;
     flex: 0 0 9.09091%;
     max-width: 9.09091%;
-    height: 100%;
-    padding: 20px 10px;
 }
 
 .top-search__item-link {
+    display: block;
     line-height: 2.5rem;
     text-decoration: none;
+    padding: 20px 10px;
+}
+
+.top-search__item-content {
+    position: relative;
 }
 
 .top-search__item-img {
-    position: relative;
     padding-top: 100%;
     background-position: top center;
     background-size: cover;
@@ -1379,7 +1382,7 @@ a.nav__notify-footer-btn {
 
 .top-search__item-purchased {
     position: absolute;
-    bottom: 0;
+    top: -25px;
     left: 0;
     width: 100%;
     color: var(--text-color-bright);
@@ -1389,10 +1392,14 @@ a.nav__notify-footer-btn {
     text-align: center;
 }
 
+.top-search__item-desc {
+    position: relative;
+    padding-top: 20px;
+}
+
 .top-search__item-title {
     display: block;
     display: -webkit-box;
-    margin-top: 20px;
     height: 50px;
     color: var(--text-color-normal);
     font-size: 1.8rem;
@@ -1408,7 +1415,7 @@ a.nav__notify-footer-btn {
 }
 
 #top-search__list-check-move:checked + .top-search__list {
-    transform: translateX(-1000px);
+    transform: translateX(calc(-9.09091% * 5));
 }
 
 #top-search__list-check-move:checked ~ .content__left-arrow {

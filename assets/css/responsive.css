@@ -72,6 +72,16 @@
         border: 1px solid var(--border-color-blur);
     }
     /* End Search Trending */
+
+    /* Top Search */
+    .top-search__list-section {
+        overflow-x: auto;
+    }
+
+    .top-search__list-section::-webkit-scrollbar {
+        display: none;
+    }
+    /* End Top Search */
     /* End Container */
 }
 /* End Mobile & Tablet */
@@ -143,6 +153,12 @@
         margin: 10px;
     }
     /* End Search Trending */
+
+    /* Top Search */
+    .top-search__list {
+        width: 312%;
+    }
+    /* End Top Search */
     /* End Container */
 }
 /* End Tablet */
@@ -301,6 +317,35 @@
         height: 56px;
     }
     /* End Search Trending */
+
+    /* Top Search */
+    .top-search__header-section {
+        border: none;
+    }
+
+    .top-search__list {
+        width: 438%;
+    }
+
+    .top-search__item-link {
+        margin: 0 4px 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0;
+    }
+
+    .top-search__item-desc {
+        padding: 4px 8px;
+        background-color: #f7f7f7;
+    }
+
+    .top-search__item-purchased {
+        position: initial;
+        color: var(--text-color-blur);
+        background-color: transparent;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    /* End Top Search */
     /* End Container */
 }
 /* End Mobile */
