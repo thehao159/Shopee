@@ -159,6 +159,16 @@
         width: 312%;
     }
     /* End Top Search */
+
+    /* Recommend Products */
+    .recommend-products__header-section  {
+        top: 68px;
+    }
+
+    .recommend-products__footer-btn {
+        width: 50%;
+    }
+    /* End Recommend Products */
     /* End Container */
 }
 /* End Tablet */
@@ -346,6 +356,17 @@
         text-align: left;
     }
     /* End Top Search */
+
+    /* Recommend Products */
+    .recommend-products__header-section  {
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.9)
+    }
+
+    .recommend-products__footer-btn {
+        width: 100%;
+    }
+    /* End Recommend Products */
     /* End Container */
 }
 /* End Mobile */

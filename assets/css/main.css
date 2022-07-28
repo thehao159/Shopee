@@ -1476,7 +1476,6 @@ a.nav__notify-footer-btn {
     display: block;
     border: 1px solid #fff;
     border-radius: 2px;
-    height: 282px;
     background-color: var(--bg-color-light);
     line-height: 0;
     box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
