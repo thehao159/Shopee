@@ -54,11 +54,11 @@
     /* End Flash Sale */
 
     /* Mall */
-    .mall__list-section {
+    .mall__list-wrapper {
         overflow-x: auto;
     }
 
-    .mall__list-section::-webkit-scrollbar {
+    .mall__list-wrapper::-webkit-scrollbar {
         display: none;
     }
 
@@ -83,6 +83,22 @@
     }
     /* End Top Search */
     /* End Container */
+
+    /* Footer */
+    .footer__certificate-policy {
+        width: 50%;
+        text-align: center;
+    }
+
+    .footer__certificate-policy::after {
+        display: none;
+    }
+
+    .footer__certificate-registered,
+    .footer__certificate-info {
+        color: var(--text-color-bold);
+    }
+    /* End Footer */
 }
 /* End Mobile & Tablet */
 
@@ -144,7 +160,7 @@
 
     /* Mall */
     .mall__list {
-        width: 450%;
+        width: 226%;
     }
     /* End Mall */
 
@@ -308,11 +324,15 @@
 
     /* Mall */
     .mall__list {
-        width: 626%;
+        width: 314%;
     }
 
     .mall__item-img {
-        height: 184px;
+        height: 174px;
+    }
+
+    .mall__item-promo {
+        bottom: 8px;
     }
     /* End Mall */
 
@@ -363,8 +383,16 @@
         background-color: rgba(255, 255, 255, 0.9)
     }
 
+    .recommend-products__content-section {
+        padding: 0;
+        margin: 0;
+    }
+
     .recommend-products__footer-btn {
-        width: 100%;
+        width: 95%;
+        border: 1px solid var(--border-color-highlight);
+        border-radius: 6px;
+        color: var(--text-color-highlight);
     }
     /* End Recommend Products */
     /* End Container */

@@ -1095,7 +1095,7 @@ a.nav__notify-footer-btn {
 
 .mall__slider {
     position: relative;
-    height: 464px;
+    height: 432px;
 }
 
 .mall__slider-link {
@@ -1142,29 +1142,17 @@ a.nav__notify-footer-btn {
     font-size: 2.0rem;
 }
 
-.mall__list-wrapper {
-    position: relative;
-}
-
-.mall__list-section {
-    width: 100%;
-    overflow: hidden;
-}
-
 .mall__list {
     display: flex;
     flex-wrap: wrap;
-    width: 200%;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
-    transform: translateX(0);
-    transition: transform 0.5s ease;
 }
 
 .mall__item {
-    width: 12.5%;
+    width: 25%;
 }
 
 .mall__item-link {
@@ -1175,7 +1163,7 @@ a.nav__notify-footer-btn {
 .mall__item-img {
     position: relative;
     width: 100%;
-    height: 232px;
+    height: 216px;
     padding: 10px;
     background-position: top center;
     background-size: 100% 100%;
@@ -1195,30 +1183,6 @@ a.nav__notify-footer-btn {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-}
-
-#mall__list-check-move {
-    display: none;
-}
-
-#mall__list-check-move:checked + .mall__list {
-    transform: translateX(calc(-12.5% * 4));
-}
-
-#mall__list-check-move:checked ~ .content__left-arrow {
-    display: block;
-}
-
-#mall__list-check-move:checked ~ .content__right-arrow {
-    display: none;
-}
-
-.mall__list-section:hover .content__left-arrow {
-    transform: translateX(-50%) translateY(-50%) scale(1.5);
-}
-
-.mall__list-section:hover .content__right-arrow {
-    transform: translateX(50%) translateY(-50%) scale(1.5);
 }
 /* End Mall */
 
@@ -1469,7 +1433,6 @@ a.nav__notify-footer-btn {
     padding: 5px 5px 0;
 }
 
-
 .recommend-products__item-link {
     position: relative;
     margin-bottom: 10px;
@@ -1691,7 +1654,7 @@ a.nav__notify-footer-btn {
 
 /* Introduction */
 .footer__introduction {
-    height: 344px;
+    height: 394px;
     color: var(--text-color-bold);
     overflow: hidden;
 }
@@ -1971,16 +1934,26 @@ li .footer__introduction-desc {
 }
 
 .footer__certificate-policy {
-    border-right: 1px solid var(--border-color-footer);
-    padding: 0 25px;
+    position: relative;
+    padding: 4px 16px;
 }
 
-.footer__certificate-policy:last-child {
+.footer__certificate-policy::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    height: 18px;
+    border-right: 1px solid var(--border-color-footer);
+}
+
+.footer__certificate-policy:last-child::after {
     border: none;
 }
 
 .footer__certificate-policy-link {
     display: block;
+    padding: 4px 8px;
     color: var(--text-color-blur);
     font-size: 1.2rem;
     word-spacing: 0.1rem;
