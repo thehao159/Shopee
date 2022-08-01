@@ -399,18 +399,19 @@ a.nav__notify-footer-btn {
 
 .header__cart {
     position: relative;
-    width: min-content;
 }
 
 .header__cart-link {
+    display: block;
+    padding: 8px 16px;
     color: transparent;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-icon {
     color: var(--text-color-bright);
     font-size: 2.2rem;
-    padding: 0 16px;
 }
 
 .header__popover-cart {
@@ -474,12 +475,14 @@ a.nav__notify-footer-btn {
 }
 
 .header__user-link {
+    display: block;
+    padding: 8px 16px;
     color: transparent;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__user-icon {
-    padding: 0 16px;
     color: var(--text-color-bright);
     font-size: 2.2rem;
 }
@@ -597,7 +600,8 @@ a.nav__notify-footer-btn {
 }
 
 .slider__mobile-bg {
-    padding-top: 40%;
+    padding-top: 44%;
+    min-height: 168px;
     max-height: 174px;
     background-position: bottom center;
     background-size: cover;

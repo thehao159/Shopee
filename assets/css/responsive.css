@@ -94,9 +94,12 @@
         display: none;
     }
 
-    .footer__certificate-registered,
     .footer__certificate-info {
         color: var(--text-color-bold);
+    }
+    
+    .footer__certificate-info {
+        margin: 10px 0 0;
     }
     /* End Footer */
 }
@@ -235,6 +238,10 @@
 
     .header__cart-wrapper {
         width: 18%;
+    }
+
+    .header__cart-link {
+        padding: 8px 12px;
     }
 
     @keyframes headerItemGrowtMobile {
