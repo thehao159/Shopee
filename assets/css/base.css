@@ -55,7 +55,10 @@ html {
 /* Header Common */
 .popover {
     background-color: var(--bg-color-light);
-    animation: headerItemGrowth 0.3s ease;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
     will-change: transform, opacity;
 }
 
@@ -75,18 +78,6 @@ html {
     position: absolute;
     top: -16px;
     height: 16px;
-}
-
-@keyframes headerItemGrowth {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 /* Content Common */
