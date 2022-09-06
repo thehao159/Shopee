@@ -230,19 +230,19 @@
                                     <div style="background-image: url('./assets/imgs/banners/slider1.png');" class="slider__left-bg"></div>
                                 </a>
                             </div>
-                            <div class="slider__left-btn-section">
-                                <div class="slider__left-btn slider__left-btn--selected"></div>
-                                <div class="slider__left-btn"></div>
-                                <div class="slider__left-btn"></div>
-                                <div class="slider__left-btn"></div>
-                                <div class="slider__left-btn"></div>
-                                <div class="slider__left-btn"></div>
+                            <div class="slider__left-btn-section content__slider-btn-section">
+                                <div class="slider__left-btn content__slider-btn content__slider-btn--selected"></div>
+                                <div class="slider__left-btn content__slider-btn"></div>
+                                <div class="slider__left-btn content__slider-btn"></div>
+                                <div class="slider__left-btn content__slider-btn"></div>
+                                <div class="slider__left-btn content__slider-btn"></div>
+                                <div class="slider__left-btn content__slider-btn"></div>
                             </div>
-                            <div class="slider__left-arrow--pre">
-                                <i class="fa-solid fa-chevron-left slider__left-arrow-icon"></i>
+                            <div class="slider__left-arrow--pre content__slider-arrow content__slider-arrow--pre">
+                                <i class="fa-solid fa-chevron-left content__slider-arrow-icon"></i>
                             </div>
-                            <div class="slider__left-arrow--next">
-                                <i class="fa-solid fa-chevron-right slider__left-arrow-icon"></i>
+                            <div class="slider__left-arrow--next content__slider-arrow content__slider-arrow--next">
+                                <i class="fa-solid fa-chevron-right content__slider-arrow-icon"></i>
                             </div>
                         </div>
 
@@ -1004,15 +1004,40 @@
                         </div>
                     </div>
                     <div class="row no-gutter mall__content-section">
-                        <div class="col l-4 m-0 c-0 mall__slider">
-                            <a href="#" class="mall__slider-link">
-                                <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
-                            </a>
-                            <div class="mall__arrow mall__arrow--pre">
-                                <i class="fa-solid fa-chevron-left mall__arrow-icon"></i>
+                        <div class="col l-4 m-0 c-0 mall__slider-section">
+                            <div class="mall__slider">
+                                <a href="#" class="mall__slider-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
+                                </a>
+                                <a href="#" class="mall__slider-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
+                                </a>
+                                <a href="#" class="mall__slider-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
+                                </a>
+                                <a href="#" class="mall__slider-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
+                                </a>
+                                <a href="#" class="mall__slider-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
+                                </a>
+                                <a href="#" class="mall__slider-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mall-banner.png');" class="mall__slider-img"></div>
+                                </a>
                             </div>
-                            <div class="mall__arrow mall__arrow--next">
-                                <i class="fa-solid fa-chevron-right mall__arrow-icon"></i>
+                            <div class="mall__arrow--pre content__slider-arrow content__slider-arrow--pre">
+                                <i class="fa-solid fa-chevron-left content__slider-arrow-icon"></i>
+                            </div>
+                            <div class="mall__arrow--next content__slider-arrow content__slider-arrow--next">
+                                <i class="fa-solid fa-chevron-right content__slider-arrow-icon"></i>
+                            </div>
+                            <div class="content__slider-btn-section">
+                                <div class="mall__slider-btn content__slider-btn content__slider-btn--selected"></div>
+                                <div class="mall__slider-btn content__slider-btn"></div>
+                                <div class="mall__slider-btn content__slider-btn"></div>
+                                <div class="mall__slider-btn content__slider-btn"></div>
+                                <div class="mall__slider-btn content__slider-btn"></div>
+                                <div class="mall__slider-btn content__slider-btn"></div>
                             </div>
                         </div>
                         <div class="col l-8 m-12 c-12 mall__list-wrapper">
@@ -2130,7 +2155,84 @@
     </div>
 
     <!-- Slider JS -->
-    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/common-slider.js"></script>
+    <!-- Main Slider -->
+    <script>
+        var currentMainSliderIndex = 0;
+        var newMainSliderIndex = 0;
+        var mainSliderParentClassName = '.slider__left';
+        var mainSliderBtnsClassName = '.slider__left-btn';
+
+        var changeTimerMainSlider = setInterval(function() {
+            newMainSliderIndex = checkLimitNext(currentMainSliderIndex, mainSliderBtnsClassName);
+            currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+        }, 5000);
+
+        document.querySelectorAll(mainSliderBtnsClassName).forEach(function(element, index) {
+            element.addEventListener('click', function() {
+                if(index != currentMainSliderIndex) {
+                    currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, index, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+                }
+            })
+        })
+
+        document.querySelector('.slider__left-arrow--next').addEventListener('click', function() {
+            newMainSliderIndex = checkLimitNext(currentMainSliderIndex, mainSliderBtnsClassName);
+            currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+            
+        });
+
+        document.querySelector('.slider__left-arrow--pre').addEventListener('click', function() {
+            newMainSliderIndex = checkLimitPre(currentMainSliderIndex, mainSliderBtnsClassName);
+            currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+        });
+
+        function resetChangeTimerMainSlider() {
+            clearInterval(changeTimerMainSlider);
+            changeTimerMainSlider = setInterval(function() {
+                newMainSliderIndex = checkLimitNext(currentMainSliderIndex, mainSliderBtnsClassName);
+                currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+            }, 5000);
+        }
+    </script>
+    <!-- Mall Slider -->
+    <script>
+        var currentMallSliderIndex = 0;
+        var newMallSliderIndex = 0;
+        var mallSliderParentClassName = '.mall__slider';
+        var mallSliderBtnsClassName = '.mall__slider-btn';
+
+        var changeTimerMallSlider = setInterval(function() {
+            newMallSliderIndex = checkLimitNext(currentMallSliderIndex, mallSliderBtnsClassName);
+            currentMallSliderIndex = handleChangeIndex(currentMallSliderIndex, newMallSliderIndex, mallSliderBtnsClassName, mallSliderParentClassName, resetChangeTimerMallSlider);
+        }, 5000);
+
+        document.querySelectorAll(mallSliderBtnsClassName).forEach(function(element, index) {
+            element.addEventListener('click', function() {
+                if(index != currentMallSliderIndex) {
+                    currentMallSliderIndex = handleChangeIndex(currentMallSliderIndex, index, mallSliderBtnsClassName, mallSliderParentClassName, resetChangeTimerMallSlider);
+                }
+            })
+        })
+
+        document.querySelector('.mall__arrow--next').addEventListener('click', function() {
+            newMallSliderIndex = checkLimitNext(currentMallSliderIndex, mallSliderBtnsClassName);
+            currentMallSliderIndex = handleChangeIndex(currentMallSliderIndex, newMallSliderIndex, mallSliderBtnsClassName, mallSliderParentClassName, resetChangeTimerMallSlider);
+        });
+
+        document.querySelector('.mall__arrow--pre').addEventListener('click', function() {
+            newMallSliderIndex = checkLimitPre(currentMallSliderIndex, mallSliderBtnsClassName);
+            currentMallSliderIndex = handleChangeIndex(currentMallSliderIndex, newMallSliderIndex, mallSliderBtnsClassName, mallSliderParentClassName, resetChangeTimerMallSlider);
+        });
+
+        function resetChangeTimerMallSlider() {
+            clearInterval(changeTimerMallSlider);
+            changeTimerMallSlider = setInterval(function() {
+                newMallSliderIndex = checkLimitNext(currentMallSliderIndex, mallSliderBtnsClassName);
+            currentMallSliderIndex = handleChangeIndex(currentMallSliderIndex, newMallSliderIndex, mallSliderBtnsClassName, mallSliderParentClassName, resetChangeTimerMallSlider);
+            }, 5000);
+        }
+    </script>
 </body>
 
 </html>
