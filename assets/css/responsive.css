@@ -139,9 +139,20 @@
         margin-top: 68px;
     }
 
+    .content__slider-btn {
+        width: 16px;
+        height: 16px;
+        margin-left: 16px
+    }
+
     /* Slider & Hot Word */
     .slider__left-section {
         width: 100%;
+    }
+
+    .slider__left-section:hover .slider__left-arrow--pre,
+    .slider__left-section:hover .slider__left-arrow--next {
+        display: none;
     }
     /* End Slider & Hot Word */
 

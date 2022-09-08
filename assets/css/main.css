@@ -526,7 +526,6 @@ a.nav__notify-footer-btn {
     display: flex;
     width: 600%;
     height: 236px;
-    transition: transform 0.5s ease;
 }
 
 .slider__left-link,

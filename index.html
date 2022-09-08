@@ -2195,6 +2195,29 @@
             }, 5000);
         }
     </script>
+    <!-- Main Silder Tablet -->
+    <script>
+        var mqTablet = window.matchMedia('(min-width: 740px) and (max-width: 1023px)');
+        window.addEventListener('resize', function() {
+            if(mqTablet.matches) {
+                document.querySelector('.slider__left').addEventListener('touchstart', function (event) {
+                    touchStartX = event.changedTouches[0].screenX;
+                }, false);
+    
+                document.querySelector('.slider__left').addEventListener('touchmove', function(event) {
+                    touchMoveX = event.touches[0].screenX;
+                    handleMoveSLider(touchStartX - touchMoveX, currentMainSliderIndex, mainSliderParentClassName, mainSliderBtnsClassName);
+                })
+                
+                document.querySelector('.slider__left').addEventListener('touchend', function (event) {
+                    touchendX = event.changedTouches[0].screenX;
+                    if(touchendX === touchStartX) return;
+                    newMainSliderIndex = handleGestureSlider(currentMainSliderIndex, mainSliderBtnsClassName);
+                    currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+                }, false);      
+            }
+        }, true);
+    </script>
     <!-- Mall Slider -->
     <script>
         var currentMallSliderIndex = 0;
