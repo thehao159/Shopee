@@ -276,6 +276,12 @@
         padding: 0 8px;
     }
 
+    .content__slider-btn {
+        width: 12px;
+        height: 12px;
+        margin-left: 12px;
+    }
+
     /* Slider & Hot Word */
     .slider-hotword {
         padding-top: 0;

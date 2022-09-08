@@ -256,9 +256,34 @@
                         </div>
 
                         <div class="slider__mobile-section">
-                            <a href="#" class="slider__mobile-link">
-                                <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
-                            </a>
+                            <div class="slider__mobile">
+                                <a href="#" class="slider__mobile-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
+                                </a>
+                                <a href="#" class="slider__mobile-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
+                                </a>
+                                <a href="#" class="slider__mobile-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
+                                </a>
+                                <a href="#" class="slider__mobile-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
+                                </a>
+                                <a href="#" class="slider__mobile-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
+                                </a>
+                                <a href="#" class="slider__mobile-link">
+                                    <div style="background-image: url('./assets/imgs/banners/mobile-slider.png');" class="slider__mobile-bg"></div>
+                                </a>
+                            </div>
+                            <div class="slider__mobile-btn-section content__slider-btn-section">
+                                <div class="slider__mobile-btn content__slider-btn content__slider-btn--selected"></div>
+                                <div class="slider__mobile-btn content__slider-btn"></div>
+                                <div class="slider__mobile-btn content__slider-btn"></div>
+                                <div class="slider__mobile-btn content__slider-btn"></div>
+                                <div class="slider__mobile-btn content__slider-btn"></div>
+                                <div class="slider__mobile-btn content__slider-btn"></div>
+                            </div>
                         </div>
                     </div>
                     <!-- End Slider -->
@@ -2198,25 +2223,70 @@
     <!-- Main Silder Tablet -->
     <script>
         var mqTablet = window.matchMedia('(min-width: 740px) and (max-width: 1023px)');
-        window.addEventListener('resize', function() {
-            if(mqTablet.matches) {
-                document.querySelector('.slider__left').addEventListener('touchstart', function (event) {
-                    touchStartX = event.changedTouches[0].screenX;
-                }, false);
-    
-                document.querySelector('.slider__left').addEventListener('touchmove', function(event) {
-                    touchMoveX = event.touches[0].screenX;
-                    handleMoveSLider(touchStartX - touchMoveX, currentMainSliderIndex, mainSliderParentClassName, mainSliderBtnsClassName);
+        if(mqTablet.matches) {
+            document.querySelector(mainSliderParentClassName).addEventListener('touchstart', function (event) {
+                touchStartX = event.changedTouches[0].screenX;
+            }, false);
+
+            document.querySelector(mainSliderParentClassName).addEventListener('touchmove', function(event) {
+                touchMoveX = event.touches[0].screenX;
+                handleMoveSLider(touchStartX - touchMoveX, currentMainSliderIndex, mainSliderParentClassName, mainSliderBtnsClassName);
+            })
+            
+            document.querySelector(mainSliderParentClassName).addEventListener('touchend', function (event) {
+                touchendX = event.changedTouches[0].screenX;
+                if(touchendX === touchStartX) return;
+                newMainSliderIndex = handleGestureSlider(currentMainSliderIndex, mainSliderBtnsClassName);
+                currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
+            }, false);      
+        }
+    </script>
+    <!-- Main Silder Mobile -->
+    <script>
+        var mqMobile = window.matchMedia('(max-width: 739px)');
+        if(mqMobile.matches) {
+            var currentMobileSliderIndex = 0;
+            var newMobileSliderIndex = 0;
+            var mobileSliderParentClassName = '.slider__mobile';
+            var moblieSliderBtnsClassName = '.slider__mobile-btn';
+
+            var changeTimerMobileSlider = setInterval(function() {
+                newMobileSliderIndex = checkLimitNext(currentMobileSliderIndex, moblieSliderBtnsClassName);
+                currentMobileSliderIndex = handleChangeIndex(currentMobileSliderIndex, newMobileSliderIndex, moblieSliderBtnsClassName, mobileSliderParentClassName, resetChangeTimerMobileSlider);
+            }, 5000);
+
+            document.querySelectorAll(moblieSliderBtnsClassName).forEach(function(element, index) {
+                element.addEventListener('click', function() {
+                    if(index != currentMobileSliderIndex) {
+                        currentMobileSliderIndex = handleChangeIndex(currentMobileSliderIndex, index, moblieSliderBtnsClassName, mobileSliderParentClassName, resetChangeTimerMobileSlider);
+                    }
                 })
-                
-                document.querySelector('.slider__left').addEventListener('touchend', function (event) {
-                    touchendX = event.changedTouches[0].screenX;
-                    if(touchendX === touchStartX) return;
-                    newMainSliderIndex = handleGestureSlider(currentMainSliderIndex, mainSliderBtnsClassName);
-                    currentMainSliderIndex = handleChangeIndex(currentMainSliderIndex, newMainSliderIndex, mainSliderBtnsClassName, mainSliderParentClassName, resetChangeTimerMainSlider);
-                }, false);      
-            }
-        }, true);
+            })
+
+            document.querySelector(mobileSliderParentClassName).addEventListener('touchstart', function (event) {
+                touchStartX = event.changedTouches[0].screenX;
+            }, false);
+
+            document.querySelector(mobileSliderParentClassName).addEventListener('touchmove', function(event) {
+                touchMoveX = event.touches[0].screenX;
+                handleMoveSLider(touchStartX - touchMoveX, currentMobileSliderIndex, mobileSliderParentClassName, moblieSliderBtnsClassName);
+            })
+            
+            document.querySelector(mobileSliderParentClassName).addEventListener('touchend', function (event) {
+                touchendX = event.changedTouches[0].screenX;
+                if(touchendX === touchStartX) return;
+                newMobileSliderIndex = handleGestureSlider(currentMobileSliderIndex, moblieSliderBtnsClassName);
+                currentMobileSliderIndex = handleChangeIndex(currentMobileSliderIndex, newMobileSliderIndex, moblieSliderBtnsClassName, mobileSliderParentClassName, resetChangeTimerMobileSlider);
+            }, false);      
+        }
+
+        function resetChangeTimerMobileSlider() {
+            clearInterval(changeTimerMobileSlider);
+            changeTimerMobileSlider = setInterval(function() {
+                newMobileSliderIndex = checkLimitNext(currentMobileSliderIndex, moblieSliderBtnsClassName);
+                currentMobileSliderIndex = handleChangeIndex(currentMobileSliderIndex, newMobileSliderIndex, moblieSliderBtnsClassName, mobileSliderParentClassName, resetChangeTimerMainSlider);
+            }, 5000);
+        }
     </script>
     <!-- Mall Slider -->
     <script>

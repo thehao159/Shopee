@@ -573,12 +573,20 @@ a.nav__notify-footer-btn {
 }
 
 .slider__mobile-section {
+    position: relative;
     display: none;
     width: 100%;
+    overflow: hidden;
+}
+
+.slider__mobile {
+    display: flex;
+    width: 600%;
 }
 
 .slider__mobile-link {
     display: block;
+    width: 100%;
     color: transparent;
     text-decoration: none;
 }
